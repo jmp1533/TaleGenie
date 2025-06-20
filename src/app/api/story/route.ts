@@ -10,7 +10,8 @@ export async function POST(req: Request) {
     };
 
     const enrichedSlides = await Promise.all(
-        slides.map(async ({ text, imagePrompt }) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        slides.map(async ({ text, imagePrompt: _imagePrompt }) => {
             // const imageUrl = await generateImage(`동화책 스타일 삽화: ${imagePrompt}`);
             const imageUrl = "/images/fallback.png";
             return { text, imageUrl };

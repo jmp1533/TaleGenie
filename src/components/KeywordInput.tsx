@@ -25,7 +25,7 @@ export default function KeywordInput({ onStoryGenerated, onStartLoading, loading
 
             const data = await res.json();
             onStoryGenerated(data);
-        } catch (error) {
+        } catch {
             onStartLoading();
         }
     };
