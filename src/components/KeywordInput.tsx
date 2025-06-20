@@ -26,7 +26,7 @@ export default function KeywordInput({ onStoryGenerated, onStartLoading, loading
             const data = await res.json();
             onStoryGenerated(data);
         } catch (error) {
-            console.error('동화 생성 중 오류:', error);
+            onStartLoading();
         }
     };
 

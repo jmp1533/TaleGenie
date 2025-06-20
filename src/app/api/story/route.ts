@@ -12,7 +12,8 @@ export async function POST(req: Request) {
 
     const enrichedSlides = await Promise.all(
         slides.map(async ({ text, imagePrompt }) => {
-            const imageUrl = await generateImage(`동화책 스타일 삽화: ${imagePrompt}`);
+            // const imageUrl = await generateImage(`동화책 스타일 삽화: ${imagePrompt}`);
+            const imageUrl = "/images/fallback.png";
             return { text, imageUrl };
         })
     );

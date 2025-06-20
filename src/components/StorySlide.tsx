@@ -10,13 +10,13 @@ interface Props {
 }
 
 export default function StorySlide({
-                                       imageUrl,
-                                       text,
-                                       onNext,
-                                       onPrev,
-                                       isFirst,
-                                       isLast,
-                                   }: Props) {
+   imageUrl,
+   text,
+   onNext,
+   onPrev,
+   isFirst,
+   isLast,
+}: Props) {
     return (
         <motion.div
             className="w-full flex flex-col items-center justify-start bg-white px-4 py-10 text-center"
@@ -24,19 +24,16 @@ export default function StorySlide({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            {/* 이미지 */}
             <img
                 src={imageUrl}
                 alt="story image"
                 className="max-w-full max-h-96 rounded-2xl object-contain shadow-xl mb-6"
             />
 
-            {/* 텍스트 */}
             <p className="text-xl font-semibold md:text-2xl whitespace-pre-wrap mb-10">
                 {text}
             </p>
 
-            {/* 버튼 */}
             <div className="flex gap-4">
                 <button
                     onClick={onPrev}
