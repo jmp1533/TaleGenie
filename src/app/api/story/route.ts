@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { generateStoryFromKeywords } from '@/lib/gemini';
-import { generateImage } from '@/lib/openaiImage';
 
 export async function POST(req: Request) {
     const { keywords } = await req.json();
